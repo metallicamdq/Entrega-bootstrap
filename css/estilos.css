@@ -96,9 +96,20 @@ body {
 /* termina el nav */
 /* comienza el main */
 /* Carrousel */
-.tamaños{
-    width: 100%;
-    height: 55%;
+.carousel-item img { 
+    height: 750px; 
+    object-fit: contain;
+}
+.carousel-item{
+    display:flex;
+    align-items: center;
+}
+.carousel-item P{
+    padding: 5px;
+    background-color: #fffb;
+    font-size: 3rem;
+    display: inline-block;
+
 }
 /* fin carrousel */
 main {
@@ -112,7 +123,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    text-align:center;
+    text-align: center;
     justify-content: center;
     align-items: center;
 }
@@ -125,7 +136,7 @@ main {
 }
 
 .main-links a {
-    color:black;
+    color: black;
     text-decoration: none;
     border-radius: 25px;
     font-size: 4rem;
@@ -163,18 +174,29 @@ main {
     width: 100%;
     height: 100%;
 }
-
 /* galeria grid */
 .gallery-container {
     display: grid;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%,25rem),1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
     grid-auto-rows: 22rem;
     padding: 2px;
     gap: 5px;
 }
+
 .gallery-item {
     position: relative;
+    overflow: hidden;
+    transition: all 500ms ease;
+    border-radius: 5px;
+    box-shadow: 1px 10px 15px rgba(0,0,0,0.50);
+}
+.gallery-item img{
+    transition: all 500ms ease;
+}
+.gallery-item img:hover{
+    transform:scale(1.2);
+    cursor: pointer;
 }
 
 .gallery-img {
@@ -221,6 +243,7 @@ p {
     margin: 25px;
     text-justify: distribute-all-lines;
 }
+
 /* conocenos */
 .cuadrados {
     display: flex;
@@ -228,6 +251,7 @@ p {
     justify-content: space-around;
     align-items: center;
 }
+
 .cuadrado1 {
     background-color: #fee2f8;
     background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
@@ -264,6 +288,7 @@ p {
     background-color: #cdedfd;
     background-image: linear-gradient(319deg, #cdedfd 0%, #ffec82 37%, #ffcfd2 100%);
 }
+
 /* fin conocenos */
 .titulo-h3 {
     background-color: darkcyan;
@@ -300,55 +325,327 @@ li {
 }
 
 /* footer */
-footer {
-    width: 100%;
-    align-self: flex-end;
-    line-height: 3;
-    text-align: center;
-    background-color: #a40606;
-    background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
-    color: white
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("http://andreeabunget.co.uk/Img/footer.jpg");
+    background-size: cover;
+
 }
 
-footer span {
-    font-size: 20px;
+.first {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: rgb(206, 206, 206);
+    font-family: 'Poppins', sans-serif;
 }
+
+.first h4 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #fff;
+    padding-bottom: 0.5em;
+}
+
+.first h4::after {
+    content: '';
+    background: black;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.first p {
+    font-size: 14px;
+}
+
+.second {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: rgb(206, 206, 206);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.second2 {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: rgb(206, 206, 206);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.second h4 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #fff;
+    padding-bottom: 0.5em;
+}
+
+.second h4::after {
+    content: '';
+    background: black;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+}
+
+
+.second li {
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.second a,
+.second2 a {
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.second a:hover,
+.second2 a:hover {
+    color: #fff;
+    transition: 0.2s;
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 1);
+    text-decoration: none
+}
+
+
+
+.third {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: rgb(206, 206, 206);
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+}
+
+
+.third h4 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #fff;
+    padding-bottom: 0.5em;
+}
+
+
+.third h4::after {
+    content: '';
+    background: black;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+}
+
+
+
+.third li {
+    list-style: none;
+    padding-bottom: 15px;
+}
+
+
+.third a {
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+
+.third a:hover {
+    color: #fff;
+    transition: 0.2s;
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 1);
+}
+
+
+@media screen and (max-width:1000px) {
+    .first {
+        text-align: center;
+    }
+
+    .first h4::after {
+        left: 40%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .third {
+        text-align: center;
+    }
+
+    .third h4::after {
+        left: 40% !important;
+    }
+}
+
+.margin {
+    margin-left: 20px;
+}
+
+.line {
+    height: 2px;
+    background-color: rgb(206, 206, 206);
+    width: 100%;
+}
+
+.container h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* fin footer */
 /* comprar */
-.galeria-compras{
-        display: grid;
-        grid-auto-flow: dense;
-        grid-template-columns: repeat(auto-fill, minmax(min(100%,25rem),1fr));
-        grid-auto-rows: 22rem;
-        padding: 2px;
-        gap: 5px;
+.galeria-compras {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
+    grid-auto-rows: 22rem;
+    padding: 2px;
+    gap: 5px;
 }
 
 /* alquileres */
 .alquileres1 {
     margin-top: 0;
 }
-.galeria-alquileres{
+
+.galeria-alquileres {
     display: grid;
     grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%,25rem),1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
     grid-auto-rows: 22rem;
     padding: 2px;
     gap: 5px;
 }
 
 /* contacto */
-.contenedor-formulario{
-    display: flex;
-    justify-content: center;
-    align-content: center;
+.contact-parent{
+    display:flex;
+    margin:80px 0;
 }
+
+.contact-child{
+    display:flex;
+    flex:1;
+    box-shadow:0px 0px 10px -2px rgba(0,0,0,0.75);
+}
+
+.child1{
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("https://cdn.pixabay.com/photo/2019/06/28/00/17/architecture-4303279_1280.jpg");
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    color:#fff;
+    padding:100px 0;
+}
+
+.child1 p{
+    padding-left:20%;
+    font-size:20px;
+    text-shadow:0px 0px 2px #000;
+}
+
+.child1 p span{
+    font-size:16px;
+    color:#9df2fd;
+}
+
+.child2{
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.inside-contact{
+    width:90%;
+    margin:0 auto;
+}
+
+.inside-contact h2{
+    text-transform:uppercase;
+    text-align:center;
+    margin-top:50px;
+}
+
+.inside-contact h3{
+    text-align:center;
+    font-size:16px;
+    color:#0085e2;
+}
+
+.inside-contact input, .inside-contact textarea{
+    width:100%;
+    background-color:#eee;
+    border:1px solid rgba(0,0,0,0.48);
+    padding:5px 10px;
+    margin-bottom:20px;
+}
+
+.inside-contact input[type=submit]{
+    background-color:#000;
+    color:#fff;
+    transition:0.2s;
+    border:2px solid #000;
+    margin:30px 0;
+}
+
+.inside-contact input[type=submit]:hover{
+    background-color:#fff;
+    color:#000;
+    transition:0.2s;
+}
+
+@media screen and (max-width:991px){
+    .contact-parent{
+        display:block;
+        width:100%;
+    }
+
+    .child1{
+        display:none;
+    }
+
+    .child2{
+        background-image:linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)), url("https://cdn.pixabay.com/photo/2019/06/28/00/17/architecture-4303279_1280.jpg");
+        background-size:cover;
+    }
+
+    .inside-contact input, .inside-contact textarea{
+        background-color:#fff;
+    }
+}
+
 .formulario {
     margin: 30px;
 }
+
 /* fin contacto */
 /* responsive */
 @media only screen and (max-width: 480px) {
-    .general-container{
+    .general-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -356,30 +653,37 @@ footer span {
         text-align: center;
         width: 100%;
     }
-    .left{
+
+    .left {
         align-self: center;
     }
-    .left img{
-    align-self: center;
-    margin-left: 0;
+
+    .left img {
+        align-self: center;
+        margin-left: 0;
     }
-    .right{
+
+    .right {
         align-self: center;
     }
-    .main-links{
+
+    .main-links {
         text-align: center;
         justify-content: center;
     }
-    .contenedor-general-main{
+
+    .contenedor-general-main {
         align-content: center;
-        
+
     }
-    .contenedor-formulario{
+
+    .contenedor-formulario {
         display: flex;
         justify-content: center;
     }
 
 }
+
 @media only screen and (max-width: 600px) {
     .general-container {
         width: 100%;
@@ -388,76 +692,94 @@ footer span {
         justify-content: center;
         align-items: center;
     }
-    .flex-container{
+
+    .flex-container {
         display: flex;
         flex-direction: column;
     }
-    .left{
+
+    .left {
         display: inline-block;
         align-self: center;
         text-align: center;
     }
-    .titulo-nav{
+
+    .titulo-nav {
         align-self: center;
     }
-    .right{
+
+    .right {
         display: inline-block;
         display: flex;
         justify-content: center;
     }
-    .contenedor-general-main{
+
+    .contenedor-general-main {
         width: 100%;
         height: 500px;
         background-image: url(../Images/imgindex/casa\ portada.jpg);
         display: flex;
         justify-content: center;
         flex-direction: column;
-        
+
     }
+
     .main-links a {
         color: black;
     }
+
     .main-links a:hover {
         border-radius: 5px;
         padding: 5px;
     }
 
 }
-@media only screen and (max-width: 768px){
+
+@media only screen and (max-width: 768px) {
     .main-links a {
-    font-size: 3rem;
+        font-size: 3rem;
     }
-    .contenedor-general-main{
+
+    .contenedor-general-main {
         flex-direction: column;
     }
-    .cuadrados{
+
+    .cuadrados {
         flex-direction: column;
     }
-    .cuadrado1{
+
+    .cuadrado1 {
         width: 100%;
     }
-    .cuadrado2{
+
+    .cuadrado2 {
         width: 100%;
     }
-    .cuadrado3{
+
+    .cuadrado3 {
         width: 100%;
     }
-    .cuadrado3 img{
+
+    .cuadrado3 img {
         width: 100%;
     }
 
 }
-@media only screen and (max-width: 1024px){
-    .cuadrados{
+
+@media only screen and (max-width: 1024px) {
+    .cuadrados {
         flex-direction: column;
     }
-    .cuadrado1{
+
+    .cuadrado1 {
         width: 100%;
     }
-    .cuadrado2{
+
+    .cuadrado2 {
         width: 100%;
     }
-    .cuadrado3{
+
+    .cuadrado3 {
         width: 100%;
     }
 }
